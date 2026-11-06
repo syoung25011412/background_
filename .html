@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: skyblue;
+            transition: 2s;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .bgcolor--gray {
+            background-color: lightgray;
+        }
+        .bgcolor--red {
+            background-color: red;
+        }
+        .bgcolor--yellow {
+            background-color: yellow;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 6px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    자바스크립트연습
+    <br><br>
+    <button class="bgcolor">배경색상 변경 그레이</button>
+    <button class="btn--red">배경색상 변경 빨강</button>
+    <button class="btn--yellow">배경색상 노랑색</button>
+    <button class="btn--reset">배경색상 초기화</button>
+
+    <script>
+        const btnBgcolor = document.querySelector('.bgcolor');
+        btnBgcolor.addEventListener('click', function(){
+            document.body.classList.toggle('bgcolor--gray');
+        })
+
+        const btnRed = document.querySelector('.btn--red');
+        btnRed.addEventListener('click', function(){
+            document.body.classList.toggle('bgcolor--red');
+        })
+
+        const btnYellow = document.querySelector('.btn--yellow');
+        btnYellow.addEventListener('click', function(){
+            document.body.classList.toggle('bgcolor--yellow');
+        })
+
+        const btnReset = document.querySelector('.btn--reset');
+        btnReset.addEventListener('click', function(){
+            document.body.classList.remove('bgcolor--gray', 'bgcolor--red', 'bgcolor--yellow');
+        })
+    </script>
+</body>
+</html>
